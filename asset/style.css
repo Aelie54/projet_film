@@ -1,0 +1,124 @@
+html{
+    font-family: Helvetica, sans-serif ;
+}
+
+#navbarre {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 5px; */
+    background-color: #edf2fb;
+    border-radius: 5px;
+}
+
+#titre{
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    /* font-size: 1,75rem; */
+    /* border: red 2px solid; */
+    text-shadow:0 1px 0 #ccc, 
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+    color: white;
+
+}
+
+#boutons_nav{
+    display: flex;
+    /* border: 1px solid red ; */
+    flex-wrap: nowrap;
+    padding:20px;
+    margin: 10px; 
+    color: white;
+}
+
+#boutons_nav a {
+    margin: 25px;
+    text-decoration: none;
+    flex-wrap: nowrap;
+    color: black;
+}
+
+#boutons_nav a:hover {
+    margin: 15px;
+    /* text-decoration:bold; */
+    color:rgb(31, 155, 155);
+    /* font-size: 1.02em; */
+    text-decoration: underline;
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px red solid;  */
+}
+
+#main_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px rgb(197, 204, 218) solid; */
+    /*padding: 5%;*/
+    margin: 3%; 
+    /* border-radius: 50% 20% / 10% 40%;
+    box-shadow: 5px 5px 5px rgb(170, 184, 214); */
+}
+
+#main_signup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px rgb(197, 204, 218) solid; 
+    padding: 5%;
+    margin: 3%;
+    border-radius: 50% 20% / 10% 40%;
+    box-shadow: 5px 5px 5px rgb(170, 184, 214); 
+}
+
+input[type="submit"] {
+    background-color: rgb(131, 161, 189);
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width : 218px ;
+    border-radius: 10px;
+}
+
+/* label
+{
+	display: block;
+	width: 250px;
+	float: center;
+    text-align: center;
+    margin-left: center;
+    margin-right: center;
+} */
+
+.birthday{
+    text-align: center;
+}
+
+span.grd_titre{
+    font-size: 1.75em;
+}
+
+input {
+    margin: .5rem;
+}
