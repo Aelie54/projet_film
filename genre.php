@@ -10,7 +10,7 @@
   <meta name="keywords" content="blog">
   <link rel="stylesheet" href="./asset/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="./controller/film.js"></script> 
+  <script src="./controller/genre.js"></script> 
   <title>Blog FIlms Cultes</title>
 </head>
 <body>
@@ -35,44 +35,22 @@
               
           <?php
           if(isset($_SESSION['user']['pseudo'] )){
-            echo '<a href="http://localhost/projet_film/controller/logout.php">Log out</a>' ; 
-          } ?> 
+              echo '<a href="http://localhost/projet_film/controller/logout.php">Log out</a>' ; 
+              } ?> 
 
           <?php
           if(isset($_SESSION['user']['pseudo'] )){
-              echo "<p> Bonjour " . $_SESSION['user']['pseudo'] . "</p>"; } ?> 
+              echo "<p>Bonjour " . $_SESSION['user']['pseudo'] . "</p>"; } ?> 
     </div>
 </div>
+
 
 <div id="main_content" > 
 
-    <div id="films_populaires">
-    <h1></h1>
-    <p></p>
-    </div>
+    <h1>Films Populaires :</h1>
 
-    <div id="films_categories">
+    <div id="films_populaires">
+      <ul></ul>
     </div>
 
 </div>
-
-  <div id="cat"> 
-    <!-- <h3> Genres :</h3> -->
-    <p></p>
-  </div>
-
-<?php 
-
-  $filmId =  $_GET['id'];         
-
-?>
-
-<script> 
-
-  let FilmId = <?php echo $filmId ?> 
-
-</script>
-
-
-
-</html>

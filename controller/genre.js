@@ -37,5 +37,3 @@ function createList(Films) {
   });}
 
 fetchFilms();
-
-

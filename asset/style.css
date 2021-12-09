@@ -18,8 +18,6 @@ html{
     display: flex;
     padding: 10px;
     margin: 10px;
-    /* font-size: 1,75rem; */
-    /* border: red 2px solid; */
     text-shadow:0 1px 0 #ccc, 
     0 2px 0 #c9c9c9,
     0 3px 0 #bbb,
@@ -33,16 +31,13 @@ html{
     0 10px 10px rgba(0,0,0,.2),
     0 20px 20px rgba(0,0,0,.15);
     color: white;
-
-}
+} 
 
 #boutons_nav{
     display: flex;
-    /* border: 1px solid red ; */
     flex-wrap: nowrap;
     padding:20px;
     margin: 10px; 
-    color: white;
 }
 
 #boutons_nav a {
@@ -50,6 +45,13 @@ html{
     text-decoration: none;
     flex-wrap: nowrap;
     color: black;
+}
+
+#boutons_nav p {
+    margin: 25px;
+    flex-wrap: nowrap;
+    color: rgb(147, 103, 218);
+    font-weight: bold;
 }
 
 #boutons_nav a:hover {
@@ -121,4 +123,29 @@ span.grd_titre{
 
 input {
     margin: .5rem;
+}
+
+#cat{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: space-between;
+
+}
+
+#films_populaires img {
+    width: 250px;
+    height: 350px;
+    margin:5px;
+}
+
+#films_populaires {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#main_content li {
+list-style-type: none;
 }

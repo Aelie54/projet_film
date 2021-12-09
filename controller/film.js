@@ -1,5 +1,68 @@
 let Datas;
 
+
+let liste_Genres = [
+  { "id": 28,
+    "name": "Action"  },
+
+  { "id": 12,
+    "name": "Aventure" },
+
+  { "id": 16,
+    "name": "Animation" },
+
+  { "id": 35,
+    "name": "Comedie"  },
+
+  { "id": 80,
+    "name": "Crime" },
+
+  { "id": 99,
+    "name": "Documentaire" },
+
+  { "id": 18,
+    "name": "Drame" },
+
+  { "id": 10751,
+    "name": "Famille"  },
+
+  { "id": 14,
+    "name": "Fantastique" },
+
+  { "id": 36,
+    "name": "Historique" },
+
+  { "id": 27,
+    "name": "Horreur"  },
+
+  { "id": 10402,
+    "name": "Musique" },
+
+  { "id": 9648,
+    "name": "Mystère" },
+
+  { "id": 10749,
+    "name": "Romance" },
+
+  { "id": 878,
+    "name": "Science Fiction" },
+
+  { "id": 10770,
+    "name": "Téléfilm"  },
+
+  { "id": 53,
+    "name": "Thriller"  },
+
+  { "id": 10752,
+    "name": "FIlm de guerre" },
+
+  { "id": 37,
+    "name": "Western" }
+];
+
+/*console.log(liste_Genres[0].name);  //affiche "Action"
+console.log(liste_Genres[0].id);  //affiche "28" */
+
 function fetchFilms() {
   
   Datas = $.ajax({
@@ -22,38 +85,63 @@ function fetchFilms() {
 
 function ShowFilm(Films) {
 
-    let Result = Films.results ;
-    console.log(FilmId);
+  let Result = Films.results ;
+  // console.log(FilmId);
         
-    $("#films_populaires").append("<ul></ul>");
+  $("#films_populaires").append("<ul></ul>");
         
-        Result.forEach((objet) => {
+  Result.forEach((objet) => {
 
-                if (FilmId === objet.id) {
+    if (FilmId === objet.id) {
 
-                    $("#films_populaires").find("h1").append(
-                        `${objet.original_title}<br>`
-                    );
-                    
-                    $("#films_populaires").find("ul").append(
-                        `<li class="article-title">${objet.original_language}</li><br>`
-                    );
-                    
-                    $("#films_populaires").find("ul").append(
-                        `<li class="article-title">${objet.popularity}</li><br>`
-                    );
+      $("#films_populaires").find("h1").append(
+        `${objet.title}<br>`
+      );
+      
+      $("#films_populaires").find("h1").append(
+          `titre original : ${objet.original_title}<br>`
+      );
+      
+      $("#films_populaires").find("ul").append(
+          `<li class="article-title">Langue en VO : ${objet.original_language}</li>`
+      );
+      
+      $("#films_populaires").find("ul").append(
+          `<li class="article-title">Note : ${objet.popularity}</li>`
+      );
 
-                    $("#films_populaires").find("ul").append(
-                        `<li class="article-title">${objet.genre_ids}</li><br>`
-                    );
-                    
-                    $("#films_populaires").append(
-                        `<img src="http://image.tmdb.org/t/p/w300/${film.poster_path}" alt="poster">`
-                    );
-                }
-            
-        })
+      $("#films_populaires").find("p").append(
+        `${objet.overview}`
+    );
+      
+      $("#films_categories").append(
+          `<img src="http://image.tmdb.org/t/p/w300/${objet.poster_path}" alt="poster">`
+      );
 
-;}
-    
-    fetchFilms();
+      // console.log(liste_Genres);
+      // console.log(objet.genre_ids);
+      
+      objet.genre_ids.forEach((id)=>{
+        // console.log("valeur id film :" + id);
+
+        liste_Genres.forEach((ID)=>{
+          // console.log("valeur id de liste des genres : " + ID.id);
+
+          if(id === ID.id)
+          {
+            //console.log(ID.name);
+            $("#cat").find("p").append(`   ${ID.name}   `);
+          }
+
+          })
+
+      })
+
+  }
+  }
+  )}
+
+
+
+
+fetchFilms();

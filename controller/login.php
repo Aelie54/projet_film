@@ -11,11 +11,11 @@ if (isset( $_POST['email'], $_POST['password'])) {
     );
 
     if (!$isValid['exist']) {
-        header('Location: http://localhost/projet_film/');
+        header('Location: http://localhost/projet_film/accueil.php');
         return;
     }
     //var_dump($_POST['email']); die;
-    header('Location: http://localhost/projet_film/');
+    header('Location: http://localhost/projet_film/accueil.php');
 }
 
 //MODEL

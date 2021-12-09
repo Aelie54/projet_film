@@ -16,21 +16,37 @@
 
 <div id="navbarre">    
 
-    <div id="titre"><h1> <span class="grd_titre">Films</span> <br> cultes & incontournables</h1></div>
+    <div id="titre">
+      <h1> <span class="grd_titre">Films</span> <br> cultes & incontournables</h1>
+    </div>
 
     <div id="boutons_nav">
-    <a href="connexion.html">Mon Pseudo</a>
-    <a href="connexion.html">Je m'identifie</a> 
-    <a href="connexion.html">Je m'inscris</a> 
-    <a href="connexion.html">Tous les films </a> 
-    <a href="connexion.html">Liste des films par catégories</a> 
+
+        <?php 
+          if(!isset($_SESSION['user']['pseudo'] )){
+              echo '<a href="http://localhost/projet_film/connection.php">login</a>' ; 
+              echo '<a href="http://localhost/projet_film/">Signup</a>'; 
+              } ?> 
+
+          <a href="http://localhost/projet_film/accueil.php">Tous les films populaires</a>
+          <a href="http://localhost/projet_film/genres.php">Par genres</a>
+          <a href="http://localhost/projet_film/accueil.php">Accueil</a>
+              
+          <?php
+          if(isset($_SESSION['user']['pseudo'] )){
+            echo '<a href="http://localhost/projet_film/controller/logout.php">Log out</a>' ; 
+        } ?> 
+
+          <?php
+          if(isset($_SESSION['user']['pseudo'] )){
+              echo "<p>Bonjour " . $_SESSION['user']['pseudo'] . "</p>"; } ?> 
     </div>
-        
 </div>
+
 
 <div id="main" >  
 
-<div id="main_content">
+<div id="main_signup">
         <h1> Je me connecte </h1><br>
 
         <form action="./controller/login.php" method="post" id="form-control">
