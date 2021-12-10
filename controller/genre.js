@@ -1,4 +1,22 @@
 let Datas;
+let CatId;
+
+var $_GET = new Array();
+
+function GET() {
+	var url = location.search.replace("?", " ").split("&");
+	for (var index = 0; index < url.length; index++) {
+		var value = url[index].split("=");
+		$_GET[value[0]] = value[1];
+    CatId = value [1]; 
+	}
+  //console.log($_GET);// return [" id": '36']
+}
+
+GET();
+
+Number("CatId"); 
+console.log(CatId); // return 36
 
 function fetchFilms() {
   
@@ -20,20 +38,36 @@ function fetchFilms() {
 
 function createList(Films) {
 
-    let Result = Films.results ;
-  // console.log(results);
-    console.log(Result);
-
-  // $("#films_populaires").append("<ul></ul>");
+  let Result = Films.results ;
+  //console.log(Result);
 
   Result.forEach((objet) => {
 
-    $("#films_populaires")
-      .find("ul")
-      .append(
-        `<a href="http://localhost/projet_film/film.php?id=${objet.id}"><img src="http://image.tmdb.org/t/p/w300/${objet.poster_path}" alt="poster"><a>`
-      );
+    objet.genre_ids.forEach((id)=>{
 
-  });}
+      
+       //console.log("valeur id film :" + id); // j'entre ici c'est OK
+       console.log("type de id API : " + typeof id) //NUMBER
+       //console.log(CatId); // j'entre ici c'est OK
+       console.log("type de Id de page : " + typeof CatId) //STRING
+       //console.log("Suivant"); 
+       
+
+        if(id == CatId)
+        {
+
+          console.log("les deux ID sont égaux");
+
+          $("#films_populaires")
+          .append(
+            `<a href="http://localhost/projet_film/film.php?id=${objet.id}"><img src="http://image.tmdb.org/t/p/w300/${objet.poster_path}" alt="poster"><a>`
+          );
+        }
+
+        })
+
+    })
+
+  }
 
 fetchFilms();

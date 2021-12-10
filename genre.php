@@ -47,10 +47,9 @@
 
 <div id="main_content" > 
 
-    <h1>Films Populaires :</h1>
+    <!-- <h1>Films Populaires :</h1> -->
 
     <div id="films_populaires">
-      <ul></ul>
     </div>
 
 </div>

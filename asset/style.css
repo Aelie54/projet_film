@@ -139,12 +139,12 @@ input {
     margin:5px;
 }
 
-#films_populaires {
+/* #films_populaires {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
+} */
 
 #main_content li {
 list-style-type: none;
