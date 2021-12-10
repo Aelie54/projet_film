@@ -4,7 +4,7 @@ function fetchFilms() {
   
   Datas = $.ajax({
     method: "GET",
-    url: "https://api.themoviedb.org/3/movie/popular?api_key=b3c081bb9f680d406e0d3801eafdee85&language=fr-FR&page=1",
+    url: "https://api.themoviedb.org/3/movie/popular?api_key=b3c081bb9f680d406e0d3801eafdee85&language=fr-FR&page=1-3",
     data: { label: "toto" },
     dataType: "json",
   });

@@ -31,6 +31,7 @@
 
           <a href="http://localhost/projet_film/accueil.php">Tous les films populaires</a>
           <a href="http://localhost/projet_film/genres.php">Par genres</a>
+          <a href="http://localhost/projet_film/search.php">Rechercher</a>
           <a href="http://localhost/projet_film/accueil.php">Accueil</a>
               
           <?php

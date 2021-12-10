@@ -1,5 +1,5 @@
 <?php session_start();
-//session_destroy(); 
+//session_destroy();
 ?>
 
 <!doctype html>
@@ -8,9 +8,8 @@
   <meta charset="utf-8">
   <meta name="monblog" content="articles blog">
   <meta name="keywords" content="blog">
-  <link rel="stylesheet" href="./asset/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="./controller/films.js"></script> 
+  <link rel="stylesheet" href="./asset/style2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <title>Blog FIlms Cultes</title>
 </head>
 <body>
@@ -36,8 +35,8 @@
               
           <?php
           if(isset($_SESSION['user']['pseudo'] )){
-              echo '<a href="http://localhost/projet_film/controller/logout.php">Log out</a>' ; 
-              } ?> 
+            echo '<a href="http://localhost/projet_film/controller/logout.php">Log out</a>' ; 
+        } ?> 
 
           <?php
           if(isset($_SESSION['user']['pseudo'] )){
@@ -45,15 +44,30 @@
     </div>
 </div>
 
+<body>
 
 <div id="main_content" > 
-
-    <h1>Films Populaires :</h1>
-
     <div id="films_populaires">
       <ul></ul>
     </div>
 
 </div>
 
+<div id="cover">
+  <form method="get" action="">
+    <div class="tb">
+      <div class="td"><input type="text" placeholder="Search" id="in"></div>
+      <div class="td">
+        <button onclick="getValue()" type="button">
+          <div id="s-circle"><h3>Rechercher</h3></div>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
 
+
+
+<script src="./controller/search.js"></script> 
+</body>

@@ -47,13 +47,13 @@ function createList(Films) {
 
       
        //console.log("valeur id film :" + id); // j'entre ici c'est OK
-       //console.log("type de id API : " + typeof id) //NUMBER
+       console.log("type de id API : " + typeof id) //NUMBER
        //console.log(CatId); // j'entre ici c'est OK
-       //console.log("type de Id de page : " + typeof CatId) //STRING
-       //console.log("Suivant"); 
+       console.log("type de Id de page : " + typeof CatId) //STRING
+       console.log("Suivant"); 
        
 
-        if(id === CATID)
+        if(id == CATID)
         {
 
           console.log("les deux ID sont égaux");

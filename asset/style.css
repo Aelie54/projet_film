@@ -147,5 +147,8 @@ input {
 } */
 
 #main_content li {
+display: flex;
 list-style-type: none;
 }
+
+

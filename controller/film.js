@@ -107,7 +107,7 @@ function ShowFilm(Films) {
       );
       
       $("#films_populaires").find("ul").append(
-          `<li class="article-title">Note : ${objet.popularity}</li>`
+          `<li class="article-title">Note : ${objet.vote_average} / 10 </li>`
       );
 
       $("#films_populaires").find("p").append(
