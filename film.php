@@ -10,7 +10,7 @@
   <meta name="keywords" content="blog">
   <link rel="stylesheet" href="./asset/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="./controller/film.js"></script> 
+  <script src="./controller/film2.js"></script> 
   <title>Blog FIlms Cultes</title>
 </head>
 <body>
@@ -59,21 +59,22 @@
 
   <div id="cat"> 
     <!-- <h3> Genres :</h3> -->
-    <p></p>
+    <ul></ul>
   </div>
 
 <?php 
 
   $filmId =  $_GET['id'];         
-
+  //$film_id = htmlspecialchars(strip_tags($_GET['FilmId']));
+  
 ?>
 
 <script> 
 
   let FilmId = <?php echo $filmId ?> 
 
-</script>
 
+</script>
 
 
 </html>

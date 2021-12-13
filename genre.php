@@ -10,7 +10,7 @@
   <meta name="keywords" content="blog">
   <link rel="stylesheet" href="./asset/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="./controller/genre.js"></script> 
+  <script src="./controller/genre2.js"></script> 
   <title>Blog FIlms Cultes</title>
 </head>
 <body>
@@ -51,6 +51,7 @@
     <!-- <h1>Films Populaires :</h1> -->
 
     <div id="films_populaires">
+      <UL></UL>
     </div>
 
 </div>

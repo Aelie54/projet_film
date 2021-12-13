@@ -111,7 +111,14 @@ function verifyPassword($aDatas, $password)
 }
 
 function createSession($aDatas){
+
     $_SESSION['user']['id'] = $aDatas['id'];
     $_SESSION['user']['pseudo'] = $aDatas['pseudo'];
+    $_SESSION['user']['birthday'] = $aDatas['birthday'];
+
+    // $_SESSION['today'] = date_default_timezone_get();
+    // // //echo "The current server timezone is: " . $today;
+    // echo $_SESSION['today']->diff($_SESSION['user']['birthday'])->format("%a:%h:%i:%s");
+
 }
 ?>
