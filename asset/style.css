@@ -31,6 +31,7 @@ html{
     0 10px 10px rgba(0,0,0,.2),
     0 20px 20px rgba(0,0,0,.15);
     color: white;
+    text-decoration: none;
 } 
 
 #boutons_nav{
@@ -44,6 +45,26 @@ html{
     margin: 25px;
     text-decoration: none;
     flex-wrap: nowrap;
+    color: black;
+}
+
+#boutons_nav2{
+    display: flex;
+    align-items: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:10px;
+    margin: 10px ;
+}
+
+#boutons_nav2 button {
+    flex-direction: row;
+    background-color: rgb(194, 194, 206) ;
+    border-radius: 4px;
+}
+
+#boutons_nav2 a{
+    text-decoration: none;
     color: black;
 }
 

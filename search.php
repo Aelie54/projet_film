@@ -29,7 +29,7 @@
               } ?> 
 
           <a href="http://localhost/projet_film/accueil.php">Tous les films populaires</a>
-          <a href="http://localhost/projet_film/genres.php">Par genres</a>
+          <!-- <a href="http://localhost/projet_film/genres.php">Par genres</a> -->
           <a href="http://localhost/projet_film/search.php">Rechercher</a>
           <a href="http://localhost/projet_film/accueil.php">Accueil</a>
               
@@ -59,7 +59,7 @@
       <div class="td"><input type="text" placeholder="Search" id="in"></div>
       <div class="td">
         <button onclick="getValue()" type="button">
-          <div id="s-circle"><h3>Rechercher</h3></div>
+          <div id="s-circle"><h3>Clic ici pour Rechercher</h3></div>
           <span></span>
         </button>
       </div>
